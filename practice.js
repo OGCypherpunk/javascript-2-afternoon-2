@@ -5,9 +5,7 @@
 
   You can refresh the page at any time to re-run all the tests.
 */
-
-////////// PROBLEM 1 //////////
-
+////////////////////////////////////////////////// PROBLEM 1 //////////////////////////////////////////////////
 // Do not edit the code below.
 var arr = [10,20,30];
 // Do not edit the code above.
@@ -16,28 +14,24 @@ var arr = [10,20,30];
   Create a function named 'first' that is given 'arr' as an argument.
   Return the first item in the given array.
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 2 //////////
+function first(arr){
+  return arr[0]
+}
+////////////////////////////////////////////////// PROBLEM 2 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var arr = [40,50,60];
 // Do not edit the code above.
-
 /*
   Create a function named 'last' that is given 'arr' as an argument. 
   Return the last item in the given array.
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 3 //////////
-
+function last (arr){
+  return arr[arr.length - 1];
+}
+////////////////////////////////////////////////// PROBLEM 3 //////////////////////////////////////////////////
 // Do not edit the code below.
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 // Do not edit the code above.
@@ -46,59 +40,71 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Create a function named 'looper' that is given family as it's only argument. 
   Loop through the given array and alert every item in the array.
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 4 //////////
+function looper(family){
+  for(let i=0; i<family.length; i++){
+    alert(family[i])
+  }
+}
+////////////////////////////////////////////////// PROBLEM 4 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var letters = ['A', 'B', 'C', 'D', 'E'];
 // Do not edit the code above.
-
 /*
   Write a function called reversedLooper that is given letters as it's only argument. 
   Loop through the given array backwards alerting every item in the array starting at the end.\
 */
-
 //Code Here
-
-
-
-////////// PROBLEM 5 //////////
-
+function reversedLooper(letters){
+  for(let i=letters.length -1 ; i>=0; i--){
+    alert(letters[i])
+  }
+}
+////////////////////////////////////////////////// PROBLEM 5 //////////////////////////////////////////////////
 // Do not edit the code below.
 var nums = [1,2,3,6,22,98,45,23,22,12];
 // Do not edit the code above.
-
 /*
   Write a function named evenFinder that is given nums as it's only argument.
   Return only the even numbers from the array.
 */
-
 //Code Here
-
-
-
-////////// EXTRA PRACTICE PROBLEMS BELOW //////////
-
-////////// PROBLEM 6 //////////
-
+function evenFinder(nums){
+  var evens=[]
+  for(let i=0; i<nums.length; i++){
+    if (nums[i] % 2 === 0){
+      evens.push(nums[i])
+    }
+  }
+  return evens
+}
+//////////////////////////////////////// EXTRA PRACTICE PROBLEMS BELOW /////////////////////////////////////////////////
+////////////////////////////////////////////////// PROBLEM 6 //////////////////////////////////////////////////
 // Do not edit the code below.
 var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 // Do not edit the code above.
 
 /*
   Write a function called divider that is given one argument, numbersArray.
-  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).
-*/
+  Have divider return an Array with the first item in the array being the evens array (all the even values from numbersArray) and the second item in the Array being the odds array (all the odd values from numbersArray).*/
 
-//Code Here
-
-
-
-////////// PROBLEM 7 //////////
+  //Code Here
+function divider(numbersArray){
+  var evens = []
+  var odds = []
+  
+  for(let i=0; i<numbersArray.length; i++){
+    if(numbersArray[i] % 2 === 0){
+      evens.push(numbersArray[i])
+    }
+    if(numbersArray[i] % 2 === 1){
+      odds.push(numbersArray[i])
+  }
+}
+return [evens,odds]
+}
+////////////////////////////////////////////////// PROBLEM 7 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var getRandomArbitrary = function() {
@@ -116,10 +122,10 @@ var getRandomArbitrary = function() {
 */
 
 //Code Here
+function finder
 
 
-
-////////// PROBLEM 8 //////////
+////////////////////////////////////////////////// PROBLEM 8 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
@@ -146,7 +152,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 
 
-////////// PROBLEM 9 //////////
+////////////////////////////////////////////////// PROBLEM 9 //////////////////////////////////////////////////
 
 /*
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
@@ -156,7 +162,7 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 
 
-////////// PROBLEM 10 //////////
+////////////////////////////////////////////////// PROBLEM 10 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var numbers = [5, '9', 16, 19, '25', '34', 48];
@@ -172,7 +178,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
 
 
-////////// PROBLEM 11 //////////
+////////////////////////////////////////////////// PROBLEM 11 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var num1 = Math.floor(Math.random() * 30);
@@ -209,7 +215,7 @@ for(var i = 0; i < num2; i++){
 
 
 
-////////// PROBLEM 12 //////////
+////////////////////////////////////////////////// PROBLEM 12 //////////////////////////////////////////////////
 
 // Do not edit the code below.
 var devMountainEmployees = [];
@@ -258,7 +264,7 @@ var colt = {
 
 
 
-////////// PROBLEM 13 //////////
+////////////////////////////////////////////////// PROBLEM 13 //////////////////////////////////////////////////
 
 
 /*
