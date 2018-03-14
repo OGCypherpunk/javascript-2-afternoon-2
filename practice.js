@@ -123,12 +123,19 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
-
-
+function finder(array){
+  var result = false
+  for(let i=0; i<array.length;i++){
+    if(array[i] === getRandomArbitrary() ){
+      result = true;
+    }
+  }
+  return result
+}
 ////////////////////////////////////////////////// PROBLEM 8 //////////////////////////////////////////////////
 
 // Do not edit the code below.
-var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+// var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 // Do not edit the code above.
 
 /*
@@ -147,11 +154,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 */
-
+var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Code Here
 
+function removeItem(myGroceryList , item){
+  var box = [];
+  for(let i=0; i<myGroceryList.length; i++){
+    if(myGroceryList[i] !== item){
+      box.push(myGroceryList[i])
+    }
+  }
+  return box
+}
 
-
+function addItem(myGroceryList , item){
+  myGroceryList.push(item);
+  return myGroceryList;
+}
 ////////////////////////////////////////////////// PROBLEM 9 //////////////////////////////////////////////////
 
 /*
@@ -160,10 +179,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-
-
+function maker(){
+  let arr = []
+  for(let i=1;i<216;i++){
+    arr.push(i)
+  }
+  return arr
+}
 ////////////////////////////////////////////////// PROBLEM 10 //////////////////////////////////////////////////
-
 // Do not edit the code below.
 var numbers = [5, '9', 16, 19, '25', '34', 48];
 // Do not edit the code above.
@@ -173,11 +196,19 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
-  
 //Code Here
-
-
-
+function addTen(numbers){
+  let arr = [];
+  for(let i=0;i<numbers.length;i++){
+    if(typeof(numbers[i]) === "string"){
+      arr.push(Number(numbers[i]) + 10);
+     }
+    else {
+      arr.push(numbers[i] + 10);
+    }
+  }
+  return arr;
+}
 ////////////////////////////////////////////////// PROBLEM 11 //////////////////////////////////////////////////
 
 // Do not edit the code below.
@@ -198,11 +229,15 @@ for(var i = 0; i < num2; i++){
   Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. 
   Return the array which is longest.
 */
-
 //Code Here
-
-
-
+function longer(arr1,arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }
+  else{
+    return arr2
+  }
+}
 /*
   As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -210,10 +245,17 @@ for(var i = 0; i < num2; i++){
 
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
-
 //Code Here
 
-
+function both(arr1,arr2){
+  let stuff = [];
+  for(let i=0;i<arr1.length;i++){
+    if(arr2.includes(arr1[i])){
+      stuff.push(arr1[i]);
+    }
+  }
+  return stuff;
+}
 
 ////////////////////////////////////////////////// PROBLEM 12 //////////////////////////////////////////////////
 
@@ -250,10 +292,9 @@ var colt = {
   Fill the devMountainEmployees array with those four objects. 
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
-
 //Code Here
-
-
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees);
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -261,10 +302,14 @@ var colt = {
 */
 
 //Code Here
+for(let i=0;i<devMountainEmployees.length;i++){
+  if(devMountainEmployees[i].name === "Cahlan"){
+     devMountainEmployees.splice(i,1)
+  }
+}
 
 
-
-////////////////////////////////////////////////// PROBLEM 13 //////////////////////////////////////////////////
+////////////////////////////////////////// PROBLEM 13 ////////////////////////////////////////////
 
 
 /*
